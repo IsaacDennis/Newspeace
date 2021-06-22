@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 import { Organization } from '../model/organization';
-import * as jsonOrgs from '../../assets/active_organizations.json';
+import jsonOrgs from '../../assets/active_organizations.json';
 @Injectable({
   providedIn: 'root'
 })

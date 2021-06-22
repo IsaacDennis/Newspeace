@@ -8,7 +8,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-card *ngFor="let news of newsArr">
+    <ion-card *ngFor="let news of newsArr" button="true" (click)="presentNewsModal(news)">
       <img [src]="news.urlToImage" width="100%" height="250px"/>
       <ion-card-header>
         <ion-card-title>{{news.title}}</ion-card-title>

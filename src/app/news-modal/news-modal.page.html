@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeNewsModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openOrgsMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notícia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="mainContent">
+  <div id="content">
+    <img [src]="news.urlToImage" width="100%"/>
+    <ion-label id="news-title">{{news.title}}</ion-label>
+    <ion-label id="news-source">{{news.source.name}}</ion-label>
+    <ion-label id="news-content">{{news.content}}</ion-label>
+  </div>
+</ion-content>
+<ion-menu side="end" contentId="mainContent" menuId="end" id="orgs-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Organizações que atuam</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item *ngFor="let org of this.os.getOrganizationsByTheme('Ecosystem Restoration')">
+      {{org.name}}
+    </ion-item>
+  </ion-content>
+</ion-menu>
