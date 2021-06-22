@@ -11,7 +11,7 @@ export class OrganizationService {
   constructor() {
     this.organizations = (jsonOrgs as any).organizations.organization;
   }
-  // O parâmetro organizations, por padrão, é o atributo "organizations" da classe. Pode-se passar um array de organizações que já foram filtrados por outro método. Ex.: filtrar as organizações que atuam na Índia e então passá-las como parâmetro para "getOrganizationsByTheme"
+  // O parâmetro organizations, caso não seja especificado, é o atributo "organizations" da classe. Pode-se passar um array de organizações que já foram filtrados por outro método. Ex.: filtrar as organizações que atuam na Índia e então passá-las como parâmetro para "getOrganizationsByTheme"
   getOrganizationsByCountry(countryName, organizations = this.organizations): Organization[] {
     return organizations.filter(org => this.getOrganizationCountries(org).map(country => country.name).includes(countryName));
   }
