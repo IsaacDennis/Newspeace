@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   constructor(private newsService: NewsService) {}
     ngOnInit(): void {
       this.newsService.news.subscribe(news => {
-	this.news = news;
+	      this.news = news;
       });
     }
 }
