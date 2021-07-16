@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { News } from '../model/news';
-import { NewsModalPage } from '../news-modal/news-modal.page';
-import { NewsService } from '../services/news.service';
+import { News } from '../../model/news';
+import { NewsModalPage } from '../../news-modal/news-modal.page';
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ export class HomePage implements OnInit{
       this.newsArr = news;
     });
   }
-  async presentNewsModal(news: News){ 
+  async presentNewsModal(news: News){
     const newsModal = await this.modalController.create({
       component: NewsModalPage,
       componentProps: { news }
