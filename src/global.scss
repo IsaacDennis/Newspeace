@@ -30,3 +30,23 @@
     font-family: 'FiraSans';
     src: url('./assets/fonts/FiraSans-Regular.ttf')
 }
+
+.title-news {
+  font-family: FiraSans !important;
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.description-news {
+  font-family: FiraSans !important;
+  color: black;
+  font-size: medium;
+}
+
+.source-news {
+  font-family: FiraSans !important;
+  color: black;
+  font-size: small;
+  font-weight: bold;
+}
