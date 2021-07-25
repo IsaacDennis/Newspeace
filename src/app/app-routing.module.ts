@@ -8,11 +8,11 @@ const routes: Routes = [
   },
   {
     path: 'orgs-modal',
-    loadChildren: () => import('./orgs-modal/orgs-modal.module').then( m => m.OrgsModalPageModule)
+    loadChildren: () => import('./modals/orgs-modal/orgs-modal.module').then( m => m.OrgsModalPageModule)
   },
   {
     path: 'news-modal',
-    loadChildren: () => import('./news-modal/news-modal.module').then( m => m.NewsModalPageModule)
+    loadChildren: () => import('./modals/news-modal/news-modal.module').then( m => m.NewsModalPageModule)
   },
 ];
 

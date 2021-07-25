@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { News } from '../../model/news';
-import { NewsModalPage } from '../../news-modal/news-modal.page';
+import { NewsModalPage } from '../../modals/news-modal/news-modal.page';
 import { NewsService } from '../../services/news.service';
 
 @Component({

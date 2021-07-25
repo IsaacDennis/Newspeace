@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuController, ModalController } from '@ionic/angular';
-import { News } from '../model/news';
-import { OrganizationService } from '../services/organization.service';
+import { News } from '../../model/news';
+import { OrganizationService } from '../../services/organization.service';
 
 @Component({
   selector: 'app-news-modal',
@@ -19,5 +19,8 @@ export class NewsModalPage implements OnInit {
   }
   openOrgsMenu(){
     this.menuController.open('end');
+  }
+  closeOrgsMenu() {
+    this.menuController.close();
   }
 }
