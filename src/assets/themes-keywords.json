@@ -1,0 +1,86 @@
+[
+    "Child Protection": {
+        en: ["child protection","violence against children","infants","children","child"],
+        pt: ["proteção infantil","violência contra crianças","bebês","crianças","criança"],
+        de: ["Kinderschutz","Gewalt gegen Kinder","Kleinkinder","Kinder","Kind"],
+        fr: ["protection de l'enfance","violence contre les enfants","nourrissons","enfants","enfant"],
+        it: ["protezione dell'infanzia","violenza contro i bambini","lattanti","bambini","bambino"],
+        nl: ["kinderbescherming","geweld tegen kinderen","baby's","kinderen","kind"]
+    },
+    "Economic Growth": {
+        en: ["poverty","poorness","indigence","undergrowth","underdevelopment","inequality"," unemployment"],
+        pt: ["pobreza","miséria","indigência","subcrescimento","subdesenvolvimento","desigualdade","desemprego"],
+        de: ["Armut","Unterholz","Unterentwicklung","Ungleichheit","Arbeitslosigkeit"],
+        fr: ["pauvreté","indigence","sous-bois","sous-développement","inégalité","chômage"],
+        it: ["povertà","indigenza","sottobosco","sottosviluppo","disuguaglianza","disoccupazione"],
+        nl: ["armoede","armheid","armengroei","ondergroei","onderontwikkeling","ongelijkheid"," werkloosheid"]
+    },
+    "Education": {
+        en: ["illiteracy","disinformation","inculture","school reopening","school dropout"],
+        pt: ["analfabetismo","desinformação","incultura","reabertura de escola","abandono escolar","evasão escolar"],
+        de: ["Analphabetismus","Desinformation","Inkultur","Wiedereröffnung der Schule","Schulabbruch"],
+        fr: ["analphabétisme","désinformation","inculture","réouverture des écoles","décrochage scolaire"],
+        it: ["analfabetismo","disinformazione","incultura","riapertura delle scuole","abbandono scolastico"],
+        nl: ["analfabetisme","desinformatie","incultuur","heropening van de school","schooluitval"]
+    },
+    "Physical Health": {
+        en: ["health","disease","illness","sickness","epidemic","plague","contagion","pandemic","disease outbreak","ebola","measles"],
+        pt: ["saúde","doença","enfermidade","epidemia","peste","contágio","pandemia","surto de doença","ebola","sarampo"],
+        de: ["Gesundheit","Krankheit","Krankheit","Epidemie","Pest","Ansteckung","Pandemie","Krankheitsausbruch","Ebola","Masern"],
+        fr: ["santé","maladie","maladie","épidémie","peste","contagion","pandémie","épidémie","épidémie","Ebola","rougeole"],
+        it: ["salute","malattia","malattia","epidemia","peste","contagio","pandemia","focolaio di malattia","ebola","morbillo"],
+        nl: ["gezondheid","ziekte","epidemie","pest","besmetting","pandemie","uitbraak van de ziekte","mazelen"]
+    },
+    "Justice and Human Rights": {
+        en: ["human trafficking","enslavement","slavery","servitude","discrimination","education","healthcare","freedom of speech","religious liberty","freedom of religion","torture prevention","refugee"],
+        pt: ["tráfico humano","servidão","discriminação","educação","saúde","liberdade de expressão","liberdade religiosa","liberdade de religião","prevenção da tortura","refugiado"],
+        de: ["Menschenhandel","Versklavung","Sklaverei","Knechtschaft","Diskriminierung","Bildung","Gesundheitswesen"," Redefreiheit","Religionsfreiheit","Religionsfreiheit","Folterprävention","Flüchtling"],
+        fr: ["traite des êtres humains","esclavage","esclavage","servitude","discrimination","éducation","santé","liberté d'expression","liberté religieuse","liberté de religion","prévention de la torture","réfugié"],
+        it: ["tratta di esseri umani","asservimento","schiavitù","servitù","discriminazione","istruzione","assistenza sanitaria","libertà di parola","libertà religiosa","libertà di religione","prevenzione della tortura","rifugiati"],
+        nl: ["mensenhandel","slavernij","slavernij","dienstbaarheid","discriminatie","onderwijs","gezondheidszorg","vrijheid van meningsuiting","religieuze vrijheid","vrijheid van godsdienst","martelpreventie","vluchteling"]
+    },
+    "Ending Human Trafficking": {
+        en: ["human trafficking","enslavement","slavery","servitude"],
+        pt: ["tráfico humano","escravidão","servidão"],
+        de: ["Menschenhandel","Versklavung","Sklaverei","Knechtschaft"],
+        fr: ["la traite des êtres humains","l'esclavage","la servitude"],
+        it: ["tratta di esseri umani","servitù"],
+        nl: ["mensenhandel","dienstbaarheid"]
+    },
+    "Peace and Reconciliation": {
+        en: ["conflagration","political conflagration","riots","civil war","war crime","violence","repression","conflict","armed conflict","reconciliation"]
+    },
+    "Disaster Response": {
+        en: ["humanitarian disaster","disaster","humanitarian crisis","crisis"],
+        pt: ["desastre humanitário","desastre","crise humanitária","crise"],
+        de: ["humanitäre Katastrophe","Katastrophe","humanitäre Krise","Krise"],
+        fr: ["catastrophe humanitaire","catastrophe","crise humanitaire","crise"],
+        it: ["disastro umanitario","disastro","crisi umanitaria","crisi"],
+        nl: ["humanitaire ramp","ramp","humanitaire crisis","crisis"]
+
+    },
+    "LGBTQIA+ Equality": {
+        en: ["gender-based violence","same-sex marriage","LGBTQIA","LGBT+","LGBT"],
+        pt: ["violência baseada em gênero","casamento entre pessoas do mesmo sexo","LGBTQIA","LGBT+","LGBT"],
+        de: ["geschlechtsspezifische Gewalt","gleichgeschlechtliche Ehe","LGBTQIA","LGBT+","LGBT"],
+        fr: ["violence basée sur le genre","mariage homosexuel","LGBTQIA","LGBT+","LGBT"],
+        it: ["violenza di genere","matrimonio tra persone dello stesso sesso","LGBTQIA","LGBT+","LGBT"],
+        nl: ["gendergerelateerd geweld","homohuwelijk","LGBTQIA","LGBT+","LGBT"]
+    },
+    "Racial Justice": {
+        en: ["racial abuse","racism","racial discrimination"],
+        pt: ["abuso racial"," racismo"," discriminação racial"],
+        de: ["Rassenmissbrauch","Rassismus","Rassendiskriminierung"],
+        fr: ["abus racial","racisme","discrimination raciale"],
+        it: ["abuso razziale","razzismo","discriminazione razziale"],
+        nl: ["racistisch misbruik","racisme","rassendiscriminatie"]
+    },
+    "Refugee Rights": {
+        en: ["UNHCR","refugee","refugees","refugee","refugee protection","protecting refugees"],
+        pt: ["ACNUR","refugiado","proteção de refugiado","proteção de refugiados"],
+        de: ["UNHCR","Flüchtling","Flüchtlinge","Flüchtlingsschutz","Schutz von Flüchtlingen"],
+        fr: ["UNHCR","réfugié","réfugiés","réfugié","protection des réfugiés","protection des réfugiés"],
+        it: ["UNHCR","rifugiati","protezione dei rifugiati","protezione dei rifugiati"],
+        nl: ["UNHCR","vluchteling","vluchtelingen","vluchtelingenbescherming","bescherming van vluchtelingen"]
+    },
+]
