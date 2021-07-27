@@ -9,5 +9,4 @@ export enum NewsLanguage {
   FR = 'fr:humanitaire', // Francês
   IT = 'it:umanitario', // Italiano
   NL = 'nl:humanitair', //Holandês
-  RU = 'ru:gumanitarnyy', // Russo
 }
