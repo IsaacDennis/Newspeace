@@ -16,5 +16,6 @@ export interface Country {
   population: string,
   postalCodeFormat: string,
   south: number,
-  west: number
+  west: number,
+  alternateNames?: string[]
 }

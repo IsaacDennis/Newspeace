@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuController, ModalController } from '@ionic/angular';
 import { News } from '../model/news';
 import { GeonamesService } from '../services/geonames.service';
+import { NewsService } from '../services/news.service';
 import { OrganizationService } from '../services/organization.service';
 
 @Component({
@@ -11,12 +12,11 @@ import { OrganizationService } from '../services/organization.service';
 })
 export class NewsModalPage implements OnInit {
   @Input() news: News;
-  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService) {
+  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService, private newsService: NewsService) {
 
   }
 
   ngOnInit() {
-    console.log(this.geonames.findCountriesInNews(this.news))
   }
   closeNewsModal(){
     this.modalController.dismiss();
