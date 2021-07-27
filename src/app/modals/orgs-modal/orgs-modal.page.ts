@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Organization } from '../model/organization';
+import { Organization } from '../../model/organization';
 
 @Component({
   selector: 'app-orgs-modal',
