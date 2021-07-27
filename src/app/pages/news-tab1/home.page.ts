@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { News } from '../../model/news';
-import { NewsModalPage } from '../../modals/news-modal/news-modal.page';
-import { NewsService } from '../../services/news.service';
+import { News } from '../model/news';
+import { NewsModalPage } from '../news-modal/news-modal.page';
+import { GeonamesService } from '../services/geonames.service';
+import { NewsService } from '../services/news.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ import { NewsService } from '../../services/news.service';
 })
 export class HomePage implements OnInit{
   newsArr: News[];
-  constructor(private newsService: NewsService, private modalController: ModalController) {}
+  constructor(private newsService: NewsService, private modalController: ModalController, private geoController: GeonamesService) {}
   ngOnInit(): void {
 	  this.newsService.news.subscribe(news => {
       this.newsArr = news;

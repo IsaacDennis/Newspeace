@@ -14,5 +14,5 @@ export interface Organization {
   state: string,
   themes: {}, // Que nem os countries: existe o atributo "theme", que contém um array de temas ou somente um objeto
   url: string,
-
+  logoUrl: string
 }
