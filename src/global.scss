@@ -24,3 +24,32 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url('./assets/fonts/FiraSans-Regular.ttf')
+}
+
+.title-news {
+  font-family: FiraSans !important;
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.description-news {
+  font-family: FiraSans !important;
+  color: black;
+  font-size: medium;
+  text-align: justify;
+}
+
+.source-news {
+  font-family: FiraSans !important;
+  color: black;
+  font-size: small;
+  font-weight: bold;
+  text-align: justify;
+}

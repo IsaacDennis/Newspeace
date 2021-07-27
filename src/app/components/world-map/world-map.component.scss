@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  overflow: hidden;
+}
+svg {
+  width: 85vw;
+  display: block;
+  margin: auto;
+  padding-top: 7.5rem;
+}
+
+path {
+  fill: #555;
+  cursor: pointer;
+}
+path:hover {
+  fill: deepskyblue;
+}

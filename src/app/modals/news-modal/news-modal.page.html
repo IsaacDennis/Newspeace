@@ -17,18 +17,24 @@
 <ion-content id="mainContent">
   <div id="content">
     <img [src]="news.urlToImage" width="100%"/>
-    <ion-label id="news-title">{{news.title}}</ion-label>
-    <ion-label id="news-source">{{news.source.name}}</ion-label>
-    <ion-label id="news-content">{{news.content}}</ion-label>
+    <ion-label class="title-news news-style-text">{{news.title}}</ion-label>
+    <ion-label class="source-news news-style-text">{{news.source.name}}</ion-label>
+    <ion-label  class="description-news news-style-text">{{news.content}}</ion-label>
   </div>
 </ion-content>
+
 <ion-menu side="end" contentId="mainContent" menuId="end" id="orgs-menu">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Organizações que atuam</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeOrgsMenu()">
+          <img class="test" src="./assets/svg/close-outline.svg">
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="title-orgs">Organizações que atuam</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
+  <ion-content class="menu-content">
     <ion-item *ngFor="let org of this.os.getOrganizationsByTheme('Ecosystem Restoration')">
       {{org.name}}
     </ion-item>
