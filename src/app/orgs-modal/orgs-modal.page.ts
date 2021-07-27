@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { Organization } from '../model/organization';
 
 @Component({
   selector: 'app-orgs-modal',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orgs-modal.page.scss'],
 })
 export class OrgsModalPage implements OnInit {
-
-  constructor() { }
+  @Input() org: Organization;
+  constructor(private modalController: ModalController) { }
 
   ngOnInit() {
   }
-
+  closeOrgsModal(){
+    this.modalController.dismiss();
+  }
 }
