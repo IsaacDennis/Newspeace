@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeNewsCountryModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notícias ({{newsArray[0].countryName}})</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list style="padding-top: 0;">
+  <div class="card-style" *ngFor="let news of newsArray" button="true" (click)="presentNewsModal(news)">
+    <img [src]="news.urlToImage" width="100%" height="250px"/>
+    <ion-card-header>
+      <ion-card-title class="title-news">{{news.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="description-news">{{news.description}}</ion-card-content>
+    <ion-card-content class="source-news">{{news.source.name}} - {{parseDate(news)}}</ion-card-content>
+  </div>
+  </ion-list>
+</ion-content>
