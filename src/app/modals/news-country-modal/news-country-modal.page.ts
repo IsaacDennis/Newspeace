@@ -10,9 +10,12 @@ import { NewsModalPage } from '../news-modal/news-modal.page';
 })
 export class NewsCountryModalPage implements OnInit {
   @Input() newsArray: News[];
+  @Input() countryName: string;
+  hasNews: boolean;
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {
+    this.hasNews = this.newsArray.length > 0;
   }
   closeNewsCountryModal(){
     this.modalController.dismiss();

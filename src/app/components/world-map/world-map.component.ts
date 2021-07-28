@@ -20,7 +20,7 @@ export class WorldMapComponent implements OnInit {
     const newsArray = this.getNewsInCountry(countryName);
     const newsCountryModal = await this.modalController.create({
       component: NewsCountryModalPage,
-      componentProps: { newsArray }
+      componentProps: { newsArray, countryName }
     });
     return await newsCountryModal.present();
   }
