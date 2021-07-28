@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>orgs-modal</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeOrgsModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{org.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div id="content">
+    <img [src]="org.logoUrl"/>
+    <ion-label class="info-label">Objetivo:</ion-label>
+    <p style="text-align:center">{{org.mission}}</p>
+    <ion-label class="info-label">País de origem:</ion-label>
+    <p>{{org.country}}, {{org.city}}</p>
+    <ion-title id="contribute-title">Você pode contribuir com esta organização</ion-title>
+    <a [href]="org.url" id="org-link">{{org.name}}</a>
+  </div>
 </ion-content>
