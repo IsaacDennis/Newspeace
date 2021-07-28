@@ -9,4 +9,7 @@ export interface News {
   publishedAt: string,
   content: string,
   languageCode: string,
+  location: string,
+  countryName: string,
+  themes: string[]
 }
