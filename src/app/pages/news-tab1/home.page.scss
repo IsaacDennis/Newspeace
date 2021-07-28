@@ -1,5 +1,11 @@
 .card-style {
   border-bottom: 3px solid #87CEEB;
   background-color: #E0E6EF;
-
+}
+#loading-div {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

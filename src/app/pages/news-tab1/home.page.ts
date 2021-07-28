@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { News } from '../../model/news';
 import { NewsModalPage } from '../../modals/news-modal/news-modal.page';
@@ -12,10 +12,15 @@ import { NewsService } from '../../services/news.service';
 })
 export class HomePage implements OnInit{
   newsArr: News[];
+  isLoading: boolean;
   constructor(private newsService: NewsService, private modalController: ModalController, private geoController: GeonamesService) {}
   ngOnInit(): void {
+    this.isLoading = true;
 	  this.newsService.news.subscribe(news => {
       this.newsArr = news;
+      if (this.newsArr.length > 0){
+        this.isLoading = false;
+      }
     });
 
   }

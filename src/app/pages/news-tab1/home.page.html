@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-list style="padding-top: 0;">
+  <ion-list style="padding-top: 0;" *ngIf="!isLoading; else loadingTemplate">
     <div class="card-style" *ngFor="let news of newsArr" button="true" (click)="presentNewsModal(news)">
       <img [src]="news.urlToImage" width="100%" height="250px"/>
       <ion-card-header>
@@ -9,4 +9,10 @@
       <ion-card-content class="source-news">{{news.source.name}} - {{parseDate(news)}}</ion-card-content>
     </div>
   </ion-list>
+  <ng-template #loadingTemplate>
+    <div id="loading-div">
+      <ion-label>Obtendo as notícias</ion-label>
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
+  </ng-template>
 </ion-content>
