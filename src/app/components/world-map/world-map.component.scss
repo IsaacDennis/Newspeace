@@ -1,16 +1,14 @@
-body {
+ody {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
   overflow: hidden;
 }
 svg {
   width: 85vw;
   display: block;
   margin: auto;
-  padding-top: 7.5rem;
 }
 
 path {
@@ -18,5 +16,25 @@ path {
   cursor: pointer;
 }
 path:hover {
-  fill: deepskyblue;
+  fill: #84eb8d;
+}
+
+ion-slides {
+  background: #9CC0FA !important;
+  height: 100%;
+}
+
+ion-buttons {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0px;
+  margin-bottom: 7.5px;
+}
+
+ion-button {
+  background-color: #f9f9f9;
+  color: #555;
+  border: solid 1px #b3b3b3;
 }
