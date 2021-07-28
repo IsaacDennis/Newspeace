@@ -6,7 +6,7 @@
         <ion-card-title class="title-news">{{news.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content class="description-news">{{news.description}}</ion-card-content>
-      <ion-card-content class="source-news">{{news.source.name}} - {{news.publishedAt}}</ion-card-content>
+      <ion-card-content class="source-news">{{news.source.name}} - {{parseDate(news)}}</ion-card-content>
     </div>
   </ion-list>
 </ion-content>
