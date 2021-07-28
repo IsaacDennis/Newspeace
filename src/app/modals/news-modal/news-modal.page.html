@@ -31,11 +31,11 @@
           <img class="test" src="./assets/svg/close-outline.svg">
         </ion-button>
       </ion-buttons>
-      <ion-title class="title-orgs">Organizações que atuam</ion-title>
+      <ion-title class="title-orgs">Organizações que atuam na região</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="menu-content">
-    <ion-item *ngFor="let org of this.os.getOrganizationsByTheme('Ecosystem Restoration')">
+    <ion-item *ngFor="let org of organizations" button="true" detail="true" (click)="presentOrgsModal(org)">
       {{org.name}}
     </ion-item>
   </ion-content>
