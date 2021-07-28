@@ -15,8 +15,8 @@ export class OrganizationService {
   getOrganizationsByCountry(countryName, organizations = this.organizations): Organization[] {
     return organizations.filter(org => this.getOrganizationCountries(org).map(country => country.name).includes(countryName));
   }
-  getOrganizationsByTheme(themeName, organizations = this.organizations): Organization[] {
-    return organizations.filter(org => this.getOrganizationThemes(org).map(theme => theme.name).includes(themeName));
+  getOrganizationsByTheme(themesName, organizations = this.organizations): Organization[] {
+    return organizations.filter(org => this.isSubArray(themesName, this.getOrganizationThemes(org).map(theme => theme.name)));
   }
   getOrganizationsByCountryISO(isoName, organizations = this.organizations): Organization[] {
     return organizations.filter(org => this.getOrganizationCountries(org).map(country => country.iso3166CountryCode).includes(isoName));
@@ -49,5 +49,13 @@ export class OrganizationService {
       return themes instanceof Array ? themes : [themes];
     }
     return [];
+  }
+  isSubArray(subarray: any[], array: any[]): boolean {
+    for (const element of subarray) {
+      if (!array.includes(element)) {
+        return false;
+      }
+    }
+    return true;
   }
 }
