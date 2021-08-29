@@ -5,14 +5,14 @@
       <ion-icon name="newspaper-outline" class="ionicon-style"></ion-icon>
       <ion-label style="font-weight: 700;">Notícías</ion-label>
     </ion-tab-button>
-  
+
     <img src="../assets/LogoPromba.png" />
 
-    <ion-tab-button tab="worldmap" class="tab">
+    <ion-tab-button tab="worldmap" class="tab" [disabled]="!worldMapEnabled">
       <ion-icon name="earth-outline" class="ionicon-style"></ion-icon>
       <ion-label style="font-weight: 700;">Globo</ion-label>
     </ion-tab-button>
-    
+
   </ion-tab-bar>
 
 </ion-tabs>
