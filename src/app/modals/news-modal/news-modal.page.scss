@@ -10,6 +10,7 @@
 .title-orgs {
   font-size: medium;
   font-weight: 700;
+  margin-left: 10px;
 }
 
 .news-style-text {
@@ -30,6 +31,7 @@
 ion-item {
   --inner-border-width: 0 0 0 0;
   --background: #f9f9f9;
+  --background-activated: blue;
   color: #1E1E23;
   font-weight: 400;
   padding-top: 1em;
