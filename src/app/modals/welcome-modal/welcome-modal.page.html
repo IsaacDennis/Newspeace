@@ -1,0 +1,25 @@
+<ion-content>
+  <div id="content">
+    <div id="welcome-logo">
+    <ion-label>Bem-vindo ao</ion-label>
+    <ion-label>Newspeace</ion-label>
+    <img src="../../assets/LogoPromba.png"/>
+    </div>
+    <p>Este aplicativo é um protótipo. Portanto: </p>
+    <div id="warnings">
+      <div class="warning-div">
+        <ion-icon name="map-outline"></ion-icon>
+        <p>Não é possível localizar a região de todas as notícias.</p>
+      </div>
+      <div class="warning-div">
+        <ion-icon name="moon-outline"></ion-icon>
+        <p>O tema escuro do dispositivo pode atrapalhar em algumas interfaces.</p>
+      </div>
+      <div class="warning-div">
+        <ion-icon name="card-outline"></ion-icon>
+        <p>Devido a limitações de API (a saber, utilização de um plano gratuito da NewsAPI), o conteúdo da notícia não é fornecido por completo.</p>
+      </div>
+    </div>
+    <ion-button (click)="dismissWelcome()">Continuar</ion-button>
+  </div>
+</ion-content>

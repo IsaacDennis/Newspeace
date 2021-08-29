@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'news-country-modal',
     loadChildren: () => import('./modals/news-country-modal/news-country-modal.module').then( m => m.NewsCountryModalPageModule)
   },
+  {
+    path: 'welcome-modal',
+    loadChildren: () => import('./modals/welcome-modal/welcome-modal.module').then( m => m.WelcomeModalPageModule)
+  },
 ];
 
 @NgModule({

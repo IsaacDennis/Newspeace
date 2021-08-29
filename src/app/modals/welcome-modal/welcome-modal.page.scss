@@ -1,0 +1,40 @@
+#content {
+  height: 100%;
+  background-color: #87CEEB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+* {
+  color: white;
+}
+ion-label {
+  font-family: 'Fira Sans';
+  font-weight: bold;
+  font-size: 24px;
+}
+#welcome-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+p {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Fira Sans';
+}
+.warning-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ion-icon {
+  font-size: 32px;
+}
+#warnings {
+  width: 95%;
+}
+ion-button {
+
+}
