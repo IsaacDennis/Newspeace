@@ -6,8 +6,16 @@
 .info-label {
   font-weight: bold;
 }
+#org-info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #contribute-title {
   margin-top: 20px;
+  font-size: 18px;
 }
 ion-toolbar {
   --background: #87CEEB;

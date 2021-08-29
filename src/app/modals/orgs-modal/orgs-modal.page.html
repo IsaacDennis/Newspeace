@@ -12,11 +12,13 @@
 <ion-content>
   <div id="content">
     <img [src]="org.logoUrl"/>
-    <ion-label class="info-label">Objetivo:</ion-label>
-    <p style="text-align:center">{{org.mission}}</p>
-    <ion-label class="info-label">País de origem:</ion-label>
-    <p>{{org.country}}, {{org.city}}</p>
-    <ion-title id="contribute-title">Você pode contribuir com esta organização</ion-title>
-    <a [href]="org.url" id="org-link">{{org.name}}</a>
+    <div id="org-info">
+      <ion-label class="info-label">Objetivo:</ion-label>
+      <p style="text-align:center">{{org.mission}}</p>
+      <ion-label class="info-label">País de origem:</ion-label>
+      <p>{{org.country}}, {{org.city}}</p>
+      <ion-label id="contribute-title">Você pode contribuir com esta organização</ion-label>
+      <a [href]="org.url" id="org-link">{{org.name}}</a>
+    </div>
   </div>
 </ion-content>
