@@ -5,6 +5,7 @@ import { News } from '../../model/news';
 import { GeonamesService } from '../../services/geonames.service';
 import { NewsService } from '../../services/news.service';
 import { OrganizationService } from '../../services/organization.service';
+import { AccessibilityService } from '../../services/accessibility.service';
 import { OrgsModalPage } from '../orgs-modal/orgs-modal.page';
 
 @Component({
@@ -16,7 +17,7 @@ export class NewsModalPage implements OnInit {
   @Input() news: News;
     organizations: Organization[] //Organizações relacionadas a esta notícia
 
-  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService, private newsService: NewsService) {
+  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService, private newsService: NewsService, private accessibility: AccessibilityService) {
 
   }
 

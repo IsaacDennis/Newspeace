@@ -21,6 +21,14 @@
     <ion-label class="source-news news-style-text">{{news.source.name}}</ion-label>
     <ion-label  class="description-news news-style-text">{{news.description}}</ion-label>
   </div>
+
+  <!-- FAB do recurso de voz -->
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="this.accessibility.speak(this.news)">
+      <ion-icon name="volume-high-outline" size="large"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
 
 <ion-menu side="end" contentId="mainContent" menuId="end" id="orgs-menu">
