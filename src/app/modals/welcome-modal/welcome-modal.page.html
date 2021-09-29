@@ -1,25 +1,46 @@
-<ion-content>
-  <div id="content">
-    <div id="welcome-logo">
-    <ion-label>Bem-vindo ao</ion-label>
-    <ion-label>Newspeace</ion-label>
-    <img src="../../assets/svg/logo-pombo.svg" style="height: 85%;"/>
-    </div>
-    <p>Este aplicativo é um protótipo. Portanto: </p>
-    <div id="warnings">
-      <div class="warning-div">
-        <ion-icon name="map-outline"></ion-icon>
-        <p>Não é possível localizar a região de todas as notícias.</p>
+<ion-content scroll-y="false" fullscreen>
+  <ion-slides pager>
+    <ion-slide class="ion-padding">
+      <div>
+        <img src="assets/svg/logo-pombo.svg"/>
+        <h1>Bem-vindo ao Newspeace</h1>
+        <ion-label>O Newspeace é um agregador de notícias centrado em ajuda humanitária e direitos humanos. O aplicativo analisa cada notícia, disponibilizando uma lista de instituições não-governamentais que contribuem para o tema da notícia (Ex.: ajuda a refugiados).</ion-label>
       </div>
-      <div class="warning-div">
-        <ion-icon name="moon-outline"></ion-icon>
-        <p>O tema escuro do dispositivo pode atrapalhar em algumas interfaces.</p>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <div class="full-slide">
+        <ion-icon name="newspaper" class="primary-icon"></ion-icon>
+        <h1>O que há de novo</h1>
+        <div class="secondary-div">
+          <ion-icon name="accessibility" class="secondary-icon"></ion-icon>
+          <h2> Recursos de acessibilidade </h2>
+          <ion-label>O segundo lançamento de demonstração do Newspeace inclui recursos de acessibilidade incipientes: teste-os no menu de preferências.</ion-label>
+        </div>
+        <div class="secondary-div">
+          <ion-icon name="help-circle" class="secondary-icon"></ion-icon>
+          <h2> Informações sobre o projeto </h2>
+          <ion-label>Uma lista de informações sobre o projeto está disponível na seção "Sobre" do menu de preferências.</ion-label>
+        </div>
       </div>
-      <div class="warning-div">
-        <ion-icon name="card-outline"></ion-icon>
-        <p>Devido a limitações de API (a saber, utilização de um plano gratuito da NewsAPI), o conteúdo da notícia não é fornecido por completo.</p>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <div class="full-slide">
+        <ion-icon name="warning" class="primary-icon"></ion-icon>
+        <h1> Avisos </h1>
+        <div class="secondary-div">
+          <ion-icon name="construct" class="secondary-icon"></ion-icon>
+          <h2> Versão de demonstração </h2>
+          <ion-label>Este aplicativo é destinado a testes, e não representa a versão final do projeto.</ion-label>
+        </div>
+        <div class="secondary-div">
+          <ion-icon name="information-circle" class="secondary-icon"></ion-icon>
+          <h2> Notícias erradas </h2>
+          <ion-label>Há uma chance pequena de encontrar notícias aleatórias durante o uso do aplicativo. </ion-label>
+        </div>
+        <ion-button id="continue-button" shape="round" (click)="this.dismissWelcome()">
+          Prosseguir
+        </ion-button>
       </div>
-    </div>
-    <ion-button (click)="dismissWelcome()">Continuar</ion-button>
-  </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

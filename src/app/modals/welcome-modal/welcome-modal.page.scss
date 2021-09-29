@@ -1,37 +1,44 @@
-#content {
+* {
+  font-family: FiraSans;
+  color: #fff;
+}
+h1, h2{
+  font-weight: bold;
+}
+ion-slides{
   height: 100%;
   background-color: #87CEEB;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-* {
-  color: white;
-}
-ion-label {
-  font-family: 'Fira Sans';
-  font-weight: bold;
-  font-size: 24px;
+  --bullet-background: #000;
+  --bullet-background-active: #fff;
 }
 #welcome-logo {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-p {
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Fira Sans';
-}
-.warning-div {
+.full-slide {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-ion-icon {
+img {
+  width: 75%;
+}
+.primary-icon {
+  font-size: 64px;
+}
+.secondary-icon {
   font-size: 32px;
 }
-#warnings {
-  width: 95%;
+.secondary-div {
+  margin-top: 50px;
+}
+#continue-button {
+  margin-top: 50px;
 }
