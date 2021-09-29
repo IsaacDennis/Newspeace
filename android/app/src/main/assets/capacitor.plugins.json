@@ -1,5 +1,9 @@
 [
 	{
+		"pkg": "@capacitor-community/text-to-speech",
+		"classpath": "com.getcapacitor.community.tts.TextToSpeechPlugin"
+	},
+	{
 		"pkg": "@capacitor/app",
 		"classpath": "com.capacitorjs.plugins.app.AppPlugin"
 	},
@@ -18,10 +22,6 @@
 	{
 		"pkg": "@capacitor/keyboard",
 		"classpath": "com.capacitorjs.plugins.keyboard.KeyboardPlugin"
-	},
-	{
-		"pkg": "@capacitor/screen-reader",
-		"classpath": "com.capacitorjs.plugins.screenreader.ScreenReaderPlugin"
 	},
 	{
 		"pkg": "@capacitor/status-bar",
