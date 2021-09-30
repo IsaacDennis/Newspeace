@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'welcome-modal',
     loadChildren: () => import('./modals/welcome-modal/welcome-modal.module').then( m => m.WelcomeModalPageModule)
   },
+  {
+    path: 'preferences-modal',
+    loadChildren: () => import('./modals/preferences-modal/preferences-modal.module').then( m => m.PreferencesModalPageModule)
+  },
 ];
 
 @NgModule({
