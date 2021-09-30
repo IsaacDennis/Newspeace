@@ -23,7 +23,7 @@
   </div>
 
   <!-- FAB do recurso de voz -->
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" [style.display]="ttsEnabled ? 'inline' : 'none'">
     <ion-fab-button (click)="this.accessibility.speak(this.news)">
       <ion-icon name="volume-high-outline" size="large"></ion-icon>
     </ion-fab-button>

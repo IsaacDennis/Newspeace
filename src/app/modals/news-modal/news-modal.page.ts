@@ -6,6 +6,7 @@ import { GeonamesService } from '../../services/geonames.service';
 import { NewsService } from '../../services/news.service';
 import { OrganizationService } from '../../services/organization.service';
 import { AccessibilityService } from '../../services/accessibility.service';
+import { PreferencesService } from '../../services/preferences.service';
 import { OrgsModalPage } from '../orgs-modal/orgs-modal.page';
 
 @Component({
@@ -15,13 +16,15 @@ import { OrgsModalPage } from '../orgs-modal/orgs-modal.page';
 })
 export class NewsModalPage implements OnInit {
   @Input() news: News;
-    organizations: Organization[] //Organizações relacionadas a esta notícia
+  organizations: Organization[] //Organizações relacionadas a esta notícia
+  ttsEnabled: boolean;
 
-  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService, private newsService: NewsService, private accessibility: AccessibilityService) {
+  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService, private newsService: NewsService, private accessibility: AccessibilityService, private preferences: PreferencesService) {
 
   }
 
   ngOnInit() {
+    this.preferences.ttsAccessibility.subscribe(value => this.ttsEnabled = value);
     let orgsInCountry = [];
     if (this.news.countryName != ""){
       orgsInCountry = this.os.getOrganizationsByCountry(this.news.countryName);
