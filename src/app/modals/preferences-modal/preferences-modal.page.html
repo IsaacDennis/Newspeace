@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>PreferencesModal</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Configurações</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="accessibility" size="large"></ion-icon>
+      <ion-label>Acessibilidade</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Habilitar síntese de fala</ion-label>
+      <ion-toggle slot="end" name="tts-toggle" [checked]="ttsEnabled" (ionChange)="toggleTts()"></ion-toggle>
+    </ion-item>
+  </ion-list>
 </ion-content>

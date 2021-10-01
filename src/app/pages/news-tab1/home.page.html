@@ -15,4 +15,11 @@
       <ion-spinner name="crescent"></ion-spinner>
     </div>
   </ng-template>
+
+  <!-- FAB para abrir o modal de preferências -->
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="presentPreferencesModal()">
+      <ion-icon name="settings"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

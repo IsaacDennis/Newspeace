@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { News } from '../../model/news';
 import { NewsModalPage } from '../../modals/news-modal/news-modal.page';
+import { PreferencesModalPage } from '../../modals/preferences-modal/preferences-modal.page';
 import { GeonamesService } from '../../services/geonames.service';
 import { NewsService } from '../../services/news.service';
 
@@ -30,6 +31,10 @@ export class HomePage implements OnInit{
       componentProps: { news }
     });
     return await newsModal.present();
+  }
+  async presentPreferencesModal(){
+    const preferencesModal = await this.modalController.create({ component: PreferencesModalPage });
+    return await preferencesModal.present();
   }
   parseDate(news: News): string{
     const date = news.publishedAt.split("T")[0];
