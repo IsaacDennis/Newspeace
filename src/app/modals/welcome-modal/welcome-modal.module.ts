@@ -13,7 +13,7 @@ import { WelcomeModalPage } from './welcome-modal.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomeModalPageRoutingModule
+    WelcomeModalPageRoutingModule,
   ],
   declarations: [WelcomeModalPage]
 })

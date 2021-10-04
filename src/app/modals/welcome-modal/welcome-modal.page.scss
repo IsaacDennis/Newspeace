@@ -5,13 +5,29 @@
 h1, h2{
   font-weight: bold;
 }
+.checkbox-label {
+  color: #000;
+}
+.checkbox-item {
+  --background-hover: #fff;
+  --background-hover-opacity: 1;
+}
+#select-languages {
+  justify-self: flex-start;
+}
+ion-checkbox {
+  --border-color: rgba(255, 255, 255, 0);
+  --border-color-checked: rgba(255, 255, 255, 0);
+  --checkmark-color: #000;
+  --background-checked:  rgba(255, 255, 255, 0);
+}
 ion-slides{
   height: 100%;
   background-color: #87CEEB;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   --bullet-background: #000;
   --bullet-background-active: #fff;
 }
@@ -39,6 +55,6 @@ img {
 .secondary-div {
   margin-top: 50px;
 }
-#continue-button {
+ion-button {
   margin-top: 50px;
 }

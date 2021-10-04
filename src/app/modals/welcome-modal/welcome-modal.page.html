@@ -37,9 +37,23 @@
           <h2> Notícias erradas </h2>
           <ion-label>Há uma chance pequena de encontrar notícias aleatórias durante o uso do aplicativo. </ion-label>
         </div>
-        <ion-button id="continue-button" shape="round" (click)="this.dismissWelcome()">
+        <ion-button shape="round" (click)="this.dismissWelcome()" *ngIf="!firstTime">
           Prosseguir
         </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide *ngIf="firstTime">
+      <div class="full-slide">
+        <h1 id="select-languages">Selecione as linguagens das notícias:</h1>
+        <div class="secondary-div">
+          <ion-list>
+            <ion-item *ngFor="let language of availableLanguages" class="checkbox-item" lines="none">
+              <ion-label class="checkbox-label">{{language.display}}</ion-label>
+              <ion-checkbox slot="end" [(ngModel)]="language.checked"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </div>
+        <ion-button (click)="confirmLanguages()">Prosseguir</ion-button>
       </div>
     </ion-slide>
   </ion-slides>
