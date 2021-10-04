@@ -25,6 +25,8 @@ export class AccessibilityService {
     const languageCode = news.languageCode;
     if (languageCode === 'pt'){
       return 'pt-BR';
+    } else if (languageCode !== 'en-US'){
+      return languageCode; // Não há sufixo em francês ou italiano
     }
     return 'en-US';
   }
