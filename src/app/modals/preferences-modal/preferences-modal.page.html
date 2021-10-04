@@ -20,4 +20,13 @@
       <ion-toggle slot="end" name="tts-toggle" [checked]="ttsEnabled" (ionChange)="toggleTts()"></ion-toggle>
     </ion-item>
   </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="information-circle" size="large"></ion-icon>
+      <ion-label>Sobre</ion-label>
+    </ion-list-header>
+    <ion-item button="true" (click)="presentParticipantsModal()">
+      <ion-label>Participantes do projeto</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

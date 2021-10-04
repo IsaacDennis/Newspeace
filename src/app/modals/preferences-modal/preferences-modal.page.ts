@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PreferencesService } from '../../services/preferences.service';
 import { AlertController, ModalController } from '@ionic/angular';
+import { ParticipantsModalPage } from '../participants-modal/participants-modal.page';
 @Component({
   selector: 'app-preferences-modal',
   templateUrl: './preferences-modal.page.html',
@@ -31,5 +32,11 @@ export class PreferencesModalPage implements OnInit {
       buttons: ['Prosseguir']
     });
     await alert.present();
+  }
+  async presentParticipantsModal(){
+    const modal = await this.modalController.create({
+      component: ParticipantsModalPage
+    });
+    await modal.present();
   }
 }

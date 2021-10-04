@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'preferences-modal',
     loadChildren: () => import('./modals/preferences-modal/preferences-modal.module').then( m => m.PreferencesModalPageModule)
   },
+  {
+    path: 'participants-modal',
+    loadChildren: () => import('./modals/participants-modal/participants-modal.module').then( m => m.ParticipantsModalPageModule)
+  },
 ];
 
 @NgModule({
