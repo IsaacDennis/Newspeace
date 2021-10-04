@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ToastController } from '@ionic/angular';
 import { NewsLanguage } from 'src/app/model/news-languages';
 import { PreferencesService } from 'src/app/services/preferences.service';
 
@@ -32,7 +32,7 @@ export class WelcomeModalPage implements OnInit {
     }
   ];
   firstTime: boolean;
-  constructor(private modalController: ModalController, private preferences: PreferencesService) {}
+  constructor(private modalController: ModalController, private preferences: PreferencesService, private toast: ToastController) {}
 
   async ngOnInit() {
     this.firstTime = await this.preferences.readFirstTime();
@@ -42,8 +42,19 @@ export class WelcomeModalPage implements OnInit {
   }
   confirmLanguages(){
     const values = this.availableLanguages.filter(lang => lang.checked).map(lang => lang.value);
+    if (values.length === 0) {
+      this.presentAlertToast();
+      return;
+    }
     this.preferences.setLanguages(values);
     this.preferences.setFirstTime(false);
     this.dismissWelcome();
+  }
+  async presentAlertToast(){
+    const toast = await this.toast.create({
+      message: 'Selecione pelo menos uma linguagem.',
+      duration: 1500
+    });
+    toast.present();
   }
 }
