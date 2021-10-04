@@ -15,7 +15,7 @@ export class AccessibilityService {
   async speak(news: News){
     const bcpCode = this.getBcpCode(news);
     await TextToSpeech.speak({
-      text: news.title,
+      text: news.title + " " + news.description,
       lang: bcpCode
     });
   }
