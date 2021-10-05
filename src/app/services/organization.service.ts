@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 import { Organization } from '../model/organization';
 import jsonOrgs from '../../assets/active_organizations.json';
 @Injectable({
@@ -11,7 +10,11 @@ export class OrganizationService {
   constructor() {
     this.organizations = (jsonOrgs as any).organizations.organization;
   }
-  // O parâmetro organizations, caso não seja especificado, é o atributo "organizations" da classe. Pode-se passar um array de organizações que já foram filtrados por outro método. Ex.: filtrar as organizações que atuam na Índia e então passá-las como parâmetro para "getOrganizationsByTheme"
+  /*
+    O parâmetro organizations, caso não seja especificado, é o atributo "organizations" da classe.
+    Pode-se passar um array de organizações que já foram filtrados por outro método.
+    Ex.: filtrar as organizações que atuam na Índia e então passá-las como parâmetro para "getOrganizationsByTheme"
+  */
   getOrganizationsByCountry(countryName, organizations = this.organizations): Organization[] {
     return organizations.filter(org => this.getOrganizationCountries(org).map(country => country.name).includes(countryName));
   }
@@ -30,7 +33,8 @@ export class OrganizationService {
       }
       */
   getOrganizationCountries(organization): any[] {
-    const countries = organization.countries.country; // Apesar de estar no plural, countries pode ser um array de objetos ou um objeto único
+    const countries = organization.countries.country;
+    // Apesar de estar no plural, countries pode ser um array de objetos ou um objeto único
     if (countries != null) {
       return countries instanceof Array ? countries : [countries];
     }
@@ -44,8 +48,8 @@ export class OrganizationService {
       }
       */
   getOrganizationThemes(organization): any[] {
-    const themes = organization.themes.theme // Ocorre o mesmo que a variável countries
-    if (themes != null) {
+    const themes = organization.themes.theme; // Ocorre o mesmo que a variável countries
+    if (themes !== null) {
       return themes instanceof Array ? themes : [themes];
     }
     return [];

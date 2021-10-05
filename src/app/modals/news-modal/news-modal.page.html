@@ -1,25 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="closeNewsModal()">
-        <ion-icon name="arrow-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button (click)="openOrgsMenu()">
-        <ion-icon name="menu"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>Notícia</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div>
+  <ion-fab (click)="closeNewsModal()" horizontal="start" vertical="top" slot="fixed">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-fab>
 
-<ion-content id="mainContent">
-  <div id="content">
-    <img [src]="news.urlToImage" width="100%"/>
-    <ion-label class="title-news news-style-text">{{news.title}}</ion-label>
-    <ion-label class="source-news news-style-text">{{news.source.name}}</ion-label>
-    <ion-label  class="description-news news-style-text">{{news.description}}</ion-label>
+  <ion-fab (click)="openOrgsMenu()" horizontal="end" vertical="top" slot="fixed">
+    <ion-icon name="menu"></ion-icon>
+  </ion-fab>
+</div>
+
+<ion-content id="mainContent" fullscreen>
+  <div class="container">
+    <img [src]="news.urlToImage" style="height: 100%; object-fit: fill !important;"/>
+    <div class="info">
+      <span class="dayNews">notícias do dia</span>
+      <span class="title">{{news.title}}</span>
+      <span class="learn-more">Leia mais</span>
+    </div>
   </div>
 
   <!-- FAB do recurso de voz -->

@@ -16,19 +16,26 @@ import { OrgsModalPage } from '../orgs-modal/orgs-modal.page';
 })
 export class NewsModalPage implements OnInit {
   @Input() news: News;
-  organizations: Organization[] //Organizações relacionadas a esta notícia
+  organizations: Organization[]; //Organizações relacionadas a esta notícia
   ttsEnabled: boolean;
 
-  constructor(private modalController: ModalController, private menuController: MenuController, private os: OrganizationService, private geonames: GeonamesService, private newsService: NewsService, private accessibility: AccessibilityService, private preferences: PreferencesService) {
+  constructor(
+    private modalController: ModalController,
+    private menuController: MenuController,
+    private os: OrganizationService,
+    private geonames: GeonamesService,
+    private newsService: NewsService,
+    public accessibility: AccessibilityService,
+    private preferences: PreferencesService) {
 
   }
 
   ngOnInit() {
     this.preferences.ttsAccessibility.subscribe(value => this.ttsEnabled = value);
     let orgsInCountry = [];
-    if (this.news.countryName != ""){
+    if (this.news.countryName !== ''){
       orgsInCountry = this.os.getOrganizationsByCountry(this.news.countryName);
-      if (this.news.themes != []){
+      if (this.news.themes !== []){
         this.organizations = this.os.getOrganizationsByTheme(this.news.themes, orgsInCountry);
       }
     }

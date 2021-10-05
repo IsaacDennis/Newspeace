@@ -1,11 +1,133 @@
-.card-style {
-  border-bottom: 3px solid #87CEEB;
-  background-color: #E0E6EF;
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
 }
+
 #loading-div {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+ion-content {
+  --background: white;
+}
+
+ion-fab > svg {
+  color: black;
+  transform: scale(2);
+  margin: 15px 15px;
+}
+
+ion-slides {
+  height: 300px;
+  border-radius: 0 0 25px 25px;
+  --bullet-background: #2E5E67;
+  --bullet-background-active: #66D3E7;
+}
+
+.dayNews {
+  display: inline-block;
+  width: 7rem;
+  height: 1.5rem;
+  padding: 5px;
+  background: rgba(163, 229, 241, 0.5);
+  border-radius: 5em;
+  font-weight: bold;
+  font-size: 12px;
+  color: #86e7fa !important;
+}
+
+ion-slide>.container>.info {
+  .title, .learn-more {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 16px;
+    color: white
+  }
+  .learn-more {
+    color: #86e7fa !important;
+    svg {
+      margin: -2px 0;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: inset 0px -90px 30px 0px rgba(0,0,0,0.5);
+}
+
+.info {
+  display: grid;
+  grid-template-rows: 94px 70px 0fr;
+  gap: 1em;
+  align-items: end;
+  margin: 50px 25px;
+}
+
+
+.container-news {
+  margin: 25px 0;
+  .title-country {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1A9CB4;
+    }
+  }
+
+  .news {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+
+    span, p {
+      font-weight: bold;
+    }
+    span {
+      color: #0a3b45;
+      font-size: 14px;
+    }
+    p {
+      color: #152c30;
+      font-size: 10px;
+    }
+  }
+
+  .see-all {
+    width: 5rem;
+    height: 1.5rem;
+    margin-top: 5px;
+    background: rgba(163, 229, 241, 0.5);
+    border-radius: 5em;
+    font-weight: bold;
+    font-size: 12px;
+    color: #126D7E !important;
+  }
+
+  .img-country-news {
+    width: 120px;
+    height: 80px;
+    border-radius: 0.75em;
+  }
+}
+
+.info-news-country {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px 0 0 25px;
+  text-align: justify;
 }

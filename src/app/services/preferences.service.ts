@@ -20,7 +20,7 @@ export class PreferencesService {
   async readFirstTime(): Promise<boolean> {
     const { value } = await Storage.get({ key: 'first-time' });
     const firstTime = JSON.parse(value);
-    if (firstTime == null) return true;
+    if (firstTime == null) { return true; };
 
     return firstTime;
   }
@@ -34,7 +34,7 @@ export class PreferencesService {
   async readTtsAccessibility(): Promise<boolean> {
     const { value } = await Storage.get({ key: 'tts-accessibility' });
     const ttsBoolean = JSON.parse(value);
-    if (ttsBoolean == null) return false;
+    if (ttsBoolean == null) { return false; };
 
     return ttsBoolean;
   }
@@ -48,7 +48,7 @@ export class PreferencesService {
   async readLanguages(): Promise<NewsLanguage[]>{
     const { value } = await Storage.get({ key: 'languages' });
     const languages = JSON.parse(value);
-    if (languages == null) return [];
+    if (languages == null) { return []; }
 
     return languages;
   }
