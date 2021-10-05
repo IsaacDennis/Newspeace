@@ -1,22 +1,53 @@
-<div>
-  <ion-fab (click)="closeNewsModal()" horizontal="start" vertical="top" slot="fixed">
-    <ion-icon name="arrow-back-outline"></ion-icon>
-  </ion-fab>
+<ion-fab (click)="closeNewsModal()" horizontal="start" vertical="top" slot="fixed">
+  <ion-icon name="arrow-back-outline"></ion-icon>
+</ion-fab>
 
-  <ion-fab (click)="openOrgsMenu()" horizontal="end" vertical="top" slot="fixed">
-    <ion-icon name="menu"></ion-icon>
-  </ion-fab>
-</div>
+<ion-fab (click)="openOrgsMenu()" horizontal="end" vertical="top" slot="fixed">
+  <ion-icon name="menu"></ion-icon>
+</ion-fab>
 
 <ion-content id="mainContent" fullscreen>
   <div class="container">
-    <img [src]="news.urlToImage" style="height: 100%; object-fit: fill !important;"/>
+    <img [src]="news.urlToImage" style="position: absolute; height: 100%; object-fit: fill !important;" />
     <div class="info">
-      <span class="dayNews">notícias do dia</span>
-      <span class="title">{{news.title}}</span>
-      <span class="learn-more">Leia mais</span>
+      <div class="container-info-grid">
+        <span class="title">{{news.title}}</span>
+        <div class="info-subgrid">
+          <span class="author-date">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+              role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <g fill="none">
+                <circle cx="12" cy="7" r="5" stroke="currentColor" stroke-width="2" />
+                <path
+                  d="M17 14h.352a3 3 0 0 1 2.976 2.628l.391 3.124A2 2 0 0 1 18.734 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg>
+            {{news.author}}
+          </span>
+          <span class="author-date">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+              role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <g fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15 16l-2.414-2.414A2 2 0 0 1 12 12.172V6" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg>
+            há 5 dias atrás
+          </span>
+        </div>
+      </div>
     </div>
   </div>
+
+  <main>
+    <div style="margin: 0 20px">
+      <p>{{news.description}}</p>
+      <p style="text-indent: 30px;color: #152c30 !important">{{news.content}}</p>
+    </div>
+  </main>
 
   <!-- FAB do recurso de voz -->
   <ion-fab horizontal="end" vertical="bottom" slot="fixed" [style.display]="ttsEnabled ? 'inline' : 'none'">
