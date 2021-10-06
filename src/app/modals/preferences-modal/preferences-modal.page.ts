@@ -1,6 +1,6 @@
+import { AcessibilityModalPage } from '../acessibility-modal/acessibility-modal.page';
 import { Component, OnInit } from '@angular/core';
-import { PreferencesService } from '../../services/preferences.service';
-import { AlertController, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 import { ParticipantsModalPage } from '../participants-modal/participants-modal.page';
 @Component({
   selector: 'app-preferences-modal',
@@ -8,34 +8,24 @@ import { ParticipantsModalPage } from '../participants-modal/participants-modal.
   styleUrls: ['./preferences-modal.page.scss'],
 })
 export class PreferencesModalPage implements OnInit {
-  ttsEnabled: boolean;
-  constructor(private preferences: PreferencesService, private modalController: ModalController, private alertController: AlertController) { }
+  constructor(
+    private modalController: ModalController
+  ) { }
 
-  ngOnInit() {
-    this.preferences.ttsAccessibility.subscribe(value => this.ttsEnabled = value);
-  }
-  toggleTts(){
-    const toggledTts = !this.ttsEnabled;
-    if (toggledTts){
-      this.presentLanguageAlert();
-    }
+  ngOnInit() {}
 
-    this.preferences.setTtsAccessibility(toggledTts);
-  }
   closeModal(){
     this.modalController.dismiss();
-  }
-  async presentLanguageAlert(){
-    const alert = await this.alertController.create({
-      header: 'ATENÇÃO:',
-      message: 'Caso nenhum som seja reproduzido, é necessário instalar os pacotes de síntese de fala nas configurações do seu dispositivo.',
-      buttons: ['Prosseguir']
-    });
-    await alert.present();
   }
   async presentParticipantsModal(){
     const modal = await this.modalController.create({
       component: ParticipantsModalPage
+    });
+    await modal.present();
+  }
+  async presentAcessibilityModal() {
+    const modal = await this.modalController.create({
+      component: AcessibilityModalPage
     });
     await modal.present();
   }

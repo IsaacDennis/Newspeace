@@ -1,14 +1,29 @@
 <ion-fab (click)="closeNewsModal()" horizontal="start" vertical="top" slot="fixed">
-  <ion-icon name="arrow-back-outline"></ion-icon>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+    width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
+    <path
+      d="M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 0 0 0 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"
+      fill="white" />
+  </svg>
 </ion-fab>
 
 <ion-fab (click)="openOrgsMenu()" horizontal="end" vertical="top" slot="fixed">
-  <ion-icon name="menu"></ion-icon>
+  <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+    role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+    <path id="rectA" d="M4 6h24v2H4z" fill="currentColor" />
+    <path id="rectB" d="M4 15h24v2H4z" fill="currentColor" />
+    <path id="rectC" d="M4 24h24v2H4z" fill="currentColor" />
+  </svg>
 </ion-fab>
 
 <ion-content id="mainContent" fullscreen>
   <div class="container">
-    <img [src]="news.urlToImage" style="position: absolute; height: 100%; object-fit: fill !important;" />
+    <img [src]="news.urlToImage" style="
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: fill !important;
+      " />
     <div class="info">
       <div class="container-info-grid">
         <span class="title">{{news.title}}</span>
@@ -45,7 +60,9 @@
   <main>
     <div style="margin: 0 20px">
       <p>{{news.description}}</p>
-      <p style="text-indent: 30px;color: #152c30 !important">{{news.content}}</p>
+      <p style="text-indent: 30px; color: #152c30 !important">
+        {{news.content}}
+      </p>
     </div>
   </main>
 
@@ -55,23 +72,27 @@
       <ion-icon name="volume-high-outline" size="large"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
 </ion-content>
 
-<ion-menu side="end" contentId="mainContent" menuId="end" id="orgs-menu">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="end">
+<ion-menu class="background-transparent" side="end" swipeGesture="true" contentId="mainContent" menuId="end"
+  id="orgs-menu">
+  <ion-header class="background-transparent">
+    <ion-toolbar class="background-transparent">
+      <ion-buttons slot="end" style="margin: 20px 10px">
         <ion-button (click)="closeOrgsMenu()">
-          <img class="test" src="./assets/svg/close-outline.svg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 320 320"
+            style="enable-background: new 0 0 320 320" xml:space="preserve">
+            <path d="m49.8 49.8 224 224m.4-224.4-224 224" style="fill: none; stroke: #fff; stroke-width: 22" />
+          </svg>
         </ion-button>
       </ion-buttons>
-      <ion-text class="title-orgs">Organizações que atuam na região</ion-text>
+      <ion-text>Organizações</ion-text>
     </ion-toolbar>
   </ion-header>
   <ion-content class="menu-content">
-    <ion-item *ngFor="let org of organizations" button="true" detail="true" (click)="presentOrgsModal(org)">
-      {{org.name}}
+    <ion-item class="ion-text-wrap" *ngFor="let org of organizations" button="true" detail="true"
+      (click)="presentOrgsModal(org)">
+      <span>{{org.name}}</span>
     </ion-item>
   </ion-content>
 </ion-menu>

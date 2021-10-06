@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuController, ModalController } from '@ionic/angular';
 import { Organization } from 'src/app/model/organization';
 import { News } from '../../model/news';
-import { GeonamesService } from '../../services/geonames.service';
-import { NewsService } from '../../services/news.service';
 import { OrganizationService } from '../../services/organization.service';
 import { AccessibilityService } from '../../services/accessibility.service';
 import { PreferencesService } from '../../services/preferences.service';
@@ -12,7 +10,7 @@ import { OrgsModalPage } from '../orgs-modal/orgs-modal.page';
 @Component({
   selector: 'app-news-modal',
   templateUrl: './news-modal.page.html',
-  styleUrls: ['./news-modal.page.scss'],
+  styleUrls: ['./news-modal.page.scss']
 })
 export class NewsModalPage implements OnInit {
   @Input() news: News;
@@ -23,10 +21,9 @@ export class NewsModalPage implements OnInit {
     private modalController: ModalController,
     private menuController: MenuController,
     private os: OrganizationService,
-    private geonames: GeonamesService,
-    private newsService: NewsService,
     public accessibility: AccessibilityService,
-    private preferences: PreferencesService) {
+    private preferences: PreferencesService
+    ) {
 
   }
 

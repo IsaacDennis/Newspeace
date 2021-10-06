@@ -1,6 +1,35 @@
+ion-toggle {
+  position: absolute;
+}
 ion-list-header * {
   font-weight: bold;
 }
 ion-toolbar{
-  --background: #87CEEB;
+  --background: #6bdaef;
+}
+
+.info-item-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 50px;
+}
+
+.desc-item {
+  font-size: smaller;
+  color: gray
+}
+
+ion-button>svg {
+  transform: scale(1.5);
 }

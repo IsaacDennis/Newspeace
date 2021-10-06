@@ -18,7 +18,7 @@ ion-content {
 ion-fab > svg {
   color: black;
   transform: scale(2);
-  margin: 15px 15px;
+  margin: 15px 25px;
 }
 
 ion-slides {
@@ -72,7 +72,6 @@ ion-slide>.container>.info {
   margin: 50px 25px;
 }
 
-
 .container-news {
   margin: 25px 0;
   .title-country {
@@ -81,7 +80,7 @@ ion-slide>.container>.info {
     justify-content: space-between;
     align-items: center;
     margin: 0 25px;
-    h2 {
+    .name-country {
       font-size: 18px;
       font-weight: bold;
       color: #1A9CB4;
@@ -131,3 +130,52 @@ ion-slide>.container>.info {
   margin: 5px 0 0 25px;
   text-align: justify;
 }
+
+@media (min-height: 1024px) {
+  ion-content>ion-slides {
+    height: 400px;
+  }
+
+  ion-slide>.container>.info {
+    .title {
+      font-size: 20px;
+    }
+    .learn-more {
+      font-size: 18px;
+    }
+  }
+  .dayNews {
+    font-size: 14px;
+    width: 8rem;
+    height: 2rem;
+    padding: 8px;
+  }
+
+  .container-news {
+    .see-all {
+      width: 7rem;
+      height: 2rem;
+      font-size: 14.5px;
+    }
+    .title-country>.name-country {
+      font-size: 20px;
+    }
+
+    .news {
+      .img-country-news {
+        width: 200px;
+        height: 125px;
+      }
+      .info-news-country {
+        justify-content: space-around;
+      }
+      span {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+

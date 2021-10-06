@@ -57,3 +57,7 @@ ion-fab-button {
   width: 80px;
   height: 80px;
 }
+ion-modal {
+  --width: 100% !important;
+  --height: 100% !important;
+}

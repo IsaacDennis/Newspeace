@@ -1,0 +1,16 @@
+ion-toolbar {
+  --background: #6bdaef;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    margin-left: 50px;
+  }
+}
+
+ion-button>svg {
+  transform: scale(1.5);
+}

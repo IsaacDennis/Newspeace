@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'participants-modal',
     loadChildren: () => import('./modals/participants-modal/participants-modal.module').then( m => m.ParticipantsModalPageModule)
   },
+  {
+    path: 'acessibility-modal',
+    loadChildren: () => import('./modals/acessibility-modal/acessibility-modal.module').then( m => m.AcessibilityModalPageModule)
+  },
 ];
 
 @NgModule({

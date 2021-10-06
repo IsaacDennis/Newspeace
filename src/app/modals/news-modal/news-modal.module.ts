@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { NewsModalPageRoutingModule } from './news-modal-routing.module';
-
 import { NewsModalPage } from './news-modal.page';
 
 @NgModule({
