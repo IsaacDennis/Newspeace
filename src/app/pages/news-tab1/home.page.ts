@@ -3,8 +3,9 @@ import { ModalController } from '@ionic/angular';
 import { News } from '../../model/news';
 import { NewsModalPage } from '../../modals/news-modal/news-modal.page';
 import { PreferencesModalPage } from '../../modals/preferences-modal/preferences-modal.page';
-import { GeonamesService } from '../../services/geonames.service';
 import { NewsService } from '../../services/news.service';
+import { Animation, AnimationController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomePage implements OnInit{
   newsArr: News[];
   highlightedNews: News[];
   isLoading: boolean;
-  constructor(private newsService: NewsService, private modalController: ModalController, private geoController: GeonamesService) {}
+  constructor(private newsService: NewsService, private modalController: ModalController, private animationCtrl: AnimationController) {}
   ngOnInit(): void {
     this.isLoading = true;
 	  this.newsService.news.subscribe(news => {
@@ -35,6 +36,15 @@ export class HomePage implements OnInit{
   }
   async presentPreferencesModal(){
     const preferencesModal = await this.modalController.create({ component: PreferencesModalPage });
+    const settingsSvg: Animation = this.animationCtrl.create()
+    .addElement(document.querySelector('.icon-settings'))
+    .duration(300)
+    .easing('ease-in-out')
+    .keyframes([
+      { offset: 0, transform: 'scale(2) rotate(0deg)'},
+      { offset: 1, transform: 'scale(2) rotate(360deg)'}
+    ]);
+    await settingsSvg.play();
     return await preferencesModal.present();
   }
   parseDate(news: News): string{

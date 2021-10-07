@@ -6,6 +6,16 @@ ion-content, .menu-content {
   --background: #F9F9F9;
 }
 
+ion-button {
+  --ripple-color: transparent;
+}
+
+ion-fab-button {
+  --background: #87CEEB;
+  --background-activated: #54ceff;
+  --background-hover: #54ceff;
+}
+
 ion-fab {
   margin: 20px 10px;
 }

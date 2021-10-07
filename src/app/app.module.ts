@@ -6,6 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeModalPageModule } from './modals/welcome-modal/welcome-modal.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
