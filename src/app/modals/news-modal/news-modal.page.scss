@@ -11,20 +11,17 @@ ion-button {
 }
 
 ion-fab-button {
-  --background: #87CEEB;
-  --background-activated: #54ceff;
-  --background-hover: #54ceff;
+  --background: #8dc6ff;
+  --background-activated: #5daeff;
+  --background-hover: #5daeff;
 }
 
 ion-fab {
   margin: 20px 10px;
 }
 
-ion-icon, svg {
-  transform: scale(1.5);
-}
-
 svg {
+  transform: scale(1.5);
   margin: 0 10px;
 }
 
@@ -89,15 +86,15 @@ main::before {
 .info-subgrid>.author-date {
   font-size: 12px;
   font-weight: bold;
-  color: rgb(163, 229, 241);
-  background: rgba(49, 118, 131, 0.5);
+  color: #8dc6ff;
+  background: rgb(34,49,63, 0.5);
   padding: 9px 8px 7.5px 0;
   border-radius: 3em;
 }
 
 main {
   p {
-    color: #0a3b45;
+    color: #22313f;
   }
 }
 
@@ -106,7 +103,7 @@ main {
 }
 
 ion-toolbar {
-  --border-width: 0;
+  --border-width: 0 !important;
   ion-text {
     font-weight: bold;
     margin: 20px;
@@ -116,13 +113,13 @@ ion-toolbar {
 ion-item {
   --inner-border-width: 0;
   --background: none;
-  --color-activated: #0F5967;
-  --detail-icon-color: #0F5967;
-  --color-hover: #0F5967;
-  --background-activated: black;
-  --background-hover: black;
+  --color-activated: #34495e;
+  --detail-icon-color: #22313f;
+  --color-hover: #22313f;
+  --background-activated: #757575;
+  --background-hover: #757575;
   --detail-icon-font-size: 24px;
-  color: #0F5967;
+  color: #22313f;
   padding-top: 1em;
   span {
     width: 80%;

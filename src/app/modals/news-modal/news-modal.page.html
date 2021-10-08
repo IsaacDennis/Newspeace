@@ -59,7 +59,7 @@
   <main>
     <div style="margin: 0 20px">
       <p>{{news.description}}</p>
-      <p style="text-indent: 30px; color: #152c30 !important">
+      <p style="text-indent: 30px; color: #34495e !important">
         {{news.content}}
       </p>
     </div>
@@ -68,7 +68,7 @@
   <!-- FAB do recurso de voz -->
   <ion-fab horizontal="end" vertical="bottom" slot="fixed" [style.display]="ttsEnabled ? 'inline' : 'none'">
     <ion-fab-button (click)="acessibilitySpeak()">
-      <svg style="transform: scale(3)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+      <svg style="transform: scale(2.5)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
         <g fill="white">
           <path class="soundA" d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
           <path class="soundB" d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
@@ -79,7 +79,7 @@
   </ion-fab>
 </ion-content>
 
-<ion-menu class="background-transparent" side="end" swipeGesture="true" contentId="mainContent" menuId="end"
+<ion-menu (ionDidClose)="menuIsOpen()" class="background-transparent" side="end" swipeGesture="true" contentId="mainContent" menuId="end"
   id="orgs-menu">
   <ion-header class="background-transparent">
     <ion-toolbar class="background-transparent">

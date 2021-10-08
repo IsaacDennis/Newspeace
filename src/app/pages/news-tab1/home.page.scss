@@ -12,7 +12,7 @@
 }
 
 ion-content {
-  --background: white;
+  --background: #F9F9F9;
 }
 
 ion-fab > .icon-settings {
@@ -24,8 +24,8 @@ ion-fab > .icon-settings {
 ion-slides {
   height: 300px;
   border-radius: 0 0 25px 25px;
-  --bullet-background: #2E5E67;
-  --bullet-background-active: #66D3E7;
+  --bullet-background: #757575;
+  --bullet-background-active: #e4f1fe;
 }
 
 .dayNews {
@@ -33,11 +33,11 @@ ion-slides {
   width: 7rem;
   height: 1.5rem;
   padding: 5px;
-  background: rgba(163, 229, 241, 0.5);
+  color: #8dc6ff;
+  background: rgb(34,49,63, 0.5);
   border-radius: 5em;
   font-weight: bold;
   font-size: 12px;
-  color: #86e7fa !important;
 }
 
 ion-slide>.container>.info {
@@ -48,7 +48,8 @@ ion-slide>.container>.info {
     color: white
   }
   .learn-more {
-    color: #86e7fa !important;
+    font-size: smaller;
+    color: #8dc6ff !important;
     svg {
       margin: -2px 0;
     }
@@ -83,7 +84,7 @@ ion-slide>.container>.info {
     .name-country {
       font-size: 18px;
       font-weight: bold;
-      color: #1A9CB4;
+      color: #22313f;
     }
   }
 
@@ -96,11 +97,11 @@ ion-slide>.container>.info {
       font-weight: bold;
     }
     span {
-      color: #0a3b45;
+      color: #22313f;
       font-size: 14px;
     }
     p {
-      color: #152c30;
+      color: #34495e;
       font-size: 10px;
     }
   }
@@ -109,11 +110,10 @@ ion-slide>.container>.info {
     width: 5rem;
     height: 1.5rem;
     margin-top: 5px;
-    background: rgba(163, 229, 241, 0.5);
+    background: #22313f;
     border-radius: 5em;
     font-weight: bold;
     font-size: 12px;
-    color: #126D7E !important;
   }
 
   .img-country-news {
