@@ -19,6 +19,9 @@ export class AccessibilityService {
       lang: bcpCode
     });
   }
+  async stopSpeech(){
+    await TextToSpeech.stop();
+  }
   // Retorna o código BCP 47 da linguagem da notícia. Ex.: pt -> pt_BR (usar português brasileiro em vez de português de portugal)
   // TODO: Adicionar mais linguagens
   getBcpCode(news: News){

@@ -47,7 +47,10 @@ export class NewsModalPage implements OnInit {
 
   async closeNewsModal() {
     this.animations.arrowBack();
-    setTimeout(() => this.modalController.dismiss(), 200);
+    setTimeout(() => {
+      this.modalController.dismiss();
+      this.accessibility.stopSpeech();
+    }, 200);
   }
   async openOrgsMenu() {
     this.animations.tabMenuAnimationOpen();
