@@ -32,11 +32,13 @@ export class NewsModalPage implements OnInit {
       (value) => (this.ttsEnabled = value)
     );
     let orgsInCountry = [];
-    if (this.news.countryName !== '') {
-      orgsInCountry = this.os.getOrganizationsByCountry(this.news.countryName);
-      if (this.news.themes !== []) {
+    const countryName = this.news.country?.countryName;
+    const themes = this.news.themes;
+    if (countryName != null) {
+      orgsInCountry = this.os.getOrganizationsByCountry(countryName);
+      if (themes !== []) {
         this.organizations = this.os.getOrganizationsByTheme(
-          this.news.themes,
+          themes,
           orgsInCountry
         );
       }

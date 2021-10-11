@@ -1,15 +1,16 @@
+import Country from './country';
 // Modificado para incluir 'languageCode' (ex.: pt, en, ru, etc...)
 export interface News {
-  source: {},
-  author: string,
-  title: string,
-  description: string,
-  url: string,
-  urlToImage: string,
-  publishedAt: string,
-  content: string,
-  languageCode: string,
-  location: string,
-  countryName: string,
-  themes: string[]
+  source: {};
+  author: string;
+  title: string;
+  description: string;
+  url: string;
+  urlToImage: string;
+  publishedAt: string;
+  content: string;
+  languageCode: string;
+  location: string;
+  country: Country;
+  themes: string[];
 }
