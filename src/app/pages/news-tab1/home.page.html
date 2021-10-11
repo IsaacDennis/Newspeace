@@ -109,24 +109,7 @@
     </div>
     <div class="container-news">
       <div class="title-country">
-        <span class="name-country">Oceânia</span>
-        <button class="ion-activatable ripple-parent see-all">
-          ver todos
-          <ion-ripple-effect></ion-ripple-effect>
-        </button>
-      </div>
-      <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
-        <img [src]="news.urlToImage" class="img-country-news"/>
-        <div class="info-news-country">
-          <span>{{news.title}}</span>
-          <p>{{news.source.name}} - {{parseDate(news)}}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-news">
-      <div class="title-country">
-        <span class="name-country">Antártida</span>
+        <span class="name-country">Oceania</span>
         <button class="ion-activatable ripple-parent see-all">
           ver todos
           <ion-ripple-effect></ion-ripple-effect>
