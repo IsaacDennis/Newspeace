@@ -9,13 +9,13 @@ import { NewsModalPage } from '../news-modal/news-modal.page';
   styleUrls: ['./news-country-modal.page.scss'],
 })
 export class NewsCountryModalPage implements OnInit {
-  @Input() newsArray: News[];
-  @Input() countryName: string;
+  @Input() news: News[];
+  @Input() headerTitle: string;
   hasNews: boolean;
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {
-    this.hasNews = this.newsArray.length > 0;
+    this.hasNews = this.news.length > 0;
   }
   closeNewsCountryModal(){
     this.modalController.dismiss();
@@ -28,14 +28,14 @@ export class NewsCountryModalPage implements OnInit {
     return await newsModal.present();
   }
   parseDate(news: News): string {
-    const date = news.publishedAt.split("T")[0];
+    const date = news.publishedAt.split('T')[0];
     const currentDate = new Date();
     const currentMonth = currentDate.getUTCMonth() + 1; //Janeiro é 0
     const currentDay = currentDate.getUTCDate();
-    const [, strMonth, strDay] = date.split("-");
+    const [, strMonth, strDay] = date.split('-');
     const publishedMonth = Number.parseInt(strMonth);
     const publishedDay = Number.parseInt(strDay);
-    if (currentMonth - publishedMonth == 0) {
+    if (currentMonth - publishedMonth === 0) {
       return currentDay - publishedDay === 0 ? 'Hoje' : `${currentDay - publishedDay} dia(s) atrás`;
     }
     return currentMonth - publishedMonth === 1 ? '1 mês atrás' : `${currentMonth - publishedMonth} meses atrás`;

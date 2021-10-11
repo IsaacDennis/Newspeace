@@ -29,12 +29,12 @@
     <div class="container-news">
       <div class="title-country">
         <span class="name-country">América do Sul</span>
-        <button class="ion-activatable ripple-parent see-all">
+        <button class="ion-activatable ripple-parent see-all" *ngIf="saNews.length > 3" (click)="presentNewsListModal('América do Sul', saNews)">
           ver todos
           <ion-ripple-effect></ion-ripple-effect>
         </button>
       </div>
-      <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
+      <div *ngFor="let news of saNews.slice(0, 3)" class="news" (click)="presentNewsModal(news)">
         <img [src]="news.urlToImage" class="img-country-news"/>
         <div class="info-news-country">
           <span>{{news.title}}</span>
@@ -46,12 +46,12 @@
     <div class="container-news">
       <div class="title-country">
         <span class="name-country">América do Norte</span>
-        <button class="ion-activatable ripple-parent see-all">
+        <button class="ion-activatable ripple-parent see-all" *ngIf="naNews.length > 3" (click)="presentNewsListModal('América do Norte', naNews)">
           ver todos
           <ion-ripple-effect></ion-ripple-effect>
         </button>
       </div>
-      <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
+      <div *ngFor="let news of naNews.slice(0, 3)" class="news" (click)="presentNewsModal(news)">
         <img [src]="news.urlToImage" class="img-country-news"/>
         <div class="info-news-country">
           <span>{{news.title}}</span>
@@ -62,12 +62,12 @@
     <div class="container-news">
       <div class="title-country">
         <span class="name-country">Europa</span>
-        <button class="ion-activatable ripple-parent see-all">
+        <button class="ion-activatable ripple-parent see-all" *ngIf="euNews.length > 3" (click)="presentNewsListModal('Europa', euNews)">
           ver todos
           <ion-ripple-effect></ion-ripple-effect>
         </button>
       </div>
-      <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
+      <div *ngFor="let news of euNews.slice(0, 3)" class="news" (click)="presentNewsModal(news)">
         <img [src]="news.urlToImage" class="img-country-news"/>
         <div class="info-news-country">
           <span>{{news.title}}</span>
@@ -78,12 +78,12 @@
     <div class="container-news">
       <div class="title-country">
         <span class="name-country">África</span>
-        <button class="ion-activatable ripple-parent see-all">
+        <button class="ion-activatable ripple-parent see-all" *ngIf="afNews.length > 3" (click)="presentNewsListModal('África', afNews)">
           ver todos
           <ion-ripple-effect></ion-ripple-effect>
         </button>
       </div>
-      <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
+      <div *ngFor="let news of afNews.slice(0, 3)" class="news" (click)="presentNewsModal(news)">
         <img [src]="news.urlToImage" class="img-country-news"/>
         <div class="info-news-country">
           <span>{{news.title}}</span>
@@ -94,12 +94,12 @@
     <div class="container-news">
         <div class="title-country">
           <span class="name-country">Ásia</span>
-          <button class="ion-activatable ripple-parent see-all">
+          <button class="ion-activatable ripple-parent see-all" *ngIf="asNews.length > 3" (click)="presentNewsListModal('Ásia', asNews)">
             ver todos
             <ion-ripple-effect></ion-ripple-effect>
           </button>
         </div>
-        <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
+        <div *ngFor="let news of asNews.slice(0, 3)" class="news" (click)="presentNewsModal(news)">
           <img [src]="news.urlToImage" class="img-country-news"/>
           <div class="info-news-country">
             <span>{{news.title}}</span>
@@ -110,12 +110,12 @@
     <div class="container-news">
       <div class="title-country">
         <span class="name-country">Oceania</span>
-        <button class="ion-activatable ripple-parent see-all">
+        <button class="ion-activatable ripple-parent see-all" *ngIf="ocNews.length > 3" (click)="presentNewsListModal('Oceania', ocNews)">
           ver todos
           <ion-ripple-effect></ion-ripple-effect>
         </button>
       </div>
-      <div *ngFor="let news of highlightedNews" class="news" (click)="presentNewsModal(news)">
+      <div *ngFor="let news of ocNews.slice(0, 3)" class="news" (click)="presentNewsModal(news)">
         <img [src]="news.urlToImage" class="img-country-news"/>
         <div class="info-news-country">
           <span>{{news.title}}</span>
