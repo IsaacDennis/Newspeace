@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'news-country-modal',
-    loadChildren: () => import('./modals/news-country-modal/news-country-modal.module').then( m => m.NewsCountryModalPageModule)
+    loadChildren: () => import('./modals/news-list-modal/news-list-modal.module').then( m => m.NewsListModalPageModule)
   },
   {
     path: 'welcome-modal',

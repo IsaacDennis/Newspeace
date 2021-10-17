@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Directive, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { IonSlides, ModalController } from '@ionic/angular';
-import { NewsCountryModalPage } from 'src/app/modals/news-country-modal/news-country-modal.page';
+import { NewsListModalPage } from 'src/app/modals/news-list-modal/news-list-modal.page';
 import { News } from 'src/app/model/news';
 import { NewsService } from 'src/app/services/news.service';
 
@@ -20,7 +20,7 @@ export class WorldMapComponent implements OnInit, AfterViewInit{
     const countryName = this.getCountryName(event.srcElement);
     const news = this.getNewsInCountry(countryName);
     const newsCountryModal = await this.modalController.create({
-      component: NewsCountryModalPage,
+      component: NewsListModalPage,
       componentProps: {
         news,
         headerTitle: `Notícias (${countryName})`

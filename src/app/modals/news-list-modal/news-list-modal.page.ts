@@ -4,11 +4,11 @@ import { News } from 'src/app/model/news';
 import { NewsModalPage } from '../news-modal/news-modal.page';
 
 @Component({
-  selector: 'app-news-country-modal',
-  templateUrl: './news-country-modal.page.html',
-  styleUrls: ['./news-country-modal.page.scss'],
+  selector: 'app-news-list-modal',
+  templateUrl: './news-list-modal.page.html',
+  styleUrls: ['./news-list-modal.page.scss'],
 })
-export class NewsCountryModalPage implements OnInit {
+export class NewsListModalPage implements OnInit {
   @Input() news: News[];
   @Input() headerTitle: string;
   hasNews: boolean;
@@ -17,7 +17,7 @@ export class NewsCountryModalPage implements OnInit {
   ngOnInit() {
     this.hasNews = this.news.length > 0;
   }
-  closeNewsCountryModal(){
+  closeNewsListModal(){
     this.modalController.dismiss();
   }
   async presentNewsModal(news: News) {

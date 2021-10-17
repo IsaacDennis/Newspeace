@@ -5,7 +5,7 @@ import { NewsModalPage } from '../../modals/news-modal/news-modal.page';
 import { PreferencesModalPage } from '../../modals/preferences-modal/preferences-modal.page';
 import { NewsService } from '../../services/news.service';
 import { Animation, AnimationController } from '@ionic/angular';
-import { NewsCountryModalPage } from 'src/app/modals/news-country-modal/news-country-modal.page';
+import { NewsListModalPage } from 'src/app/modals/news-list-modal/news-list-modal.page';
 
 
 @Component({
@@ -42,7 +42,7 @@ export class HomePage implements OnInit{
   }
   async presentNewsListModal(headerTitle: string, news: News[]){
     const newsListModal = await this.modalController.create({
-      component: NewsCountryModalPage,
+      component: NewsListModalPage,
       componentProps: {
         headerTitle,
         news
