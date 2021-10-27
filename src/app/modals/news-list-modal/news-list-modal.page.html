@@ -17,7 +17,7 @@
       <ion-card-title class="title-news">{{article.title}}</ion-card-title>
     </ion-card-header>
     <ion-card-content class="description-news">{{article.description}}</ion-card-content>
-    <ion-card-content class="source-news">{{article.source.name}} - {{parseDate(article)}}</ion-card-content>
+    <ion-card-content class="source-news">{{article.source.name}} - {{article.publishedAt | timeAgo}}</ion-card-content>
   </div>
   </ion-list>
   <ng-template #noNews>

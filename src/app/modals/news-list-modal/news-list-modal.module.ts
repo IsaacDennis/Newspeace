@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { NewsListModalPageRoutingModule } from './news-list-modal-routing.module';
 
 import { NewsListModalPage } from './news-list-modal.page';
+import { TimeAgoPipe } from '../../pipes/time-ago.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { NewsListModalPage } from './news-list-modal.page';
     IonicModule,
     NewsListModalPageRoutingModule
   ],
-  declarations: [NewsListModalPage]
+  declarations: [NewsListModalPage, TimeAgoPipe]
 })
 export class NewsListModalPageModule {}
