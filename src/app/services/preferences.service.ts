@@ -73,4 +73,7 @@ export class PreferencesService {
       value: JSON.stringify(news)
     });
   }
+  async clearPreferences(){
+    await Storage.clear();
+  }
 }
