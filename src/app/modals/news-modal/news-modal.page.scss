@@ -1,7 +1,9 @@
 .background-transparent {
   --background: rgba(200, 200, 200, 0.1);
 }
-
+.menu-toolbar {
+  --background: #8dc6ff;
+}
 ion-content, .menu-content {
   --background: #F9F9F9;
 }
