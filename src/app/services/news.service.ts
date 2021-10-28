@@ -38,38 +38,45 @@ export class NewsService {
   }
 
   updateNews(): void {
-    const promises = [];
-    this.languages.forEach(lang => {
-      promises.push(this.getLanguagePromise(lang));
-    });
-    Promise.all(promises).then(results => {
-      const languagesArray = Array.from(this.languages);
-      /* O NewsAPI não inclui a linguagem no objeto da notícia. Adicionei o código da linguagem manualmente através do atributo
-        "languageCode" (ex.: pt, en, etc..., ver model/news.ts). A ordem do Promise.all é mantida no array resultante "results"
-        (PT, EN, FR - ver o constructor). Assim, o objeto que ocupa o primeiro índice (índice 0) contém as notícias em português,
-        o segundo índice as em inglês, e as terceira em francês (e assim por diante, seja qual for a quantidade de linguagens).
-      */
-      for (let i = 0; i < this.languages.length; i++) {
-        const languageCode = this.splitNewsLanguage(languagesArray[i])[0];
-        results[i].articles.forEach(news => {
-          news.languageCode = languageCode;
-        });
+    this.preferences.readNewsFromDevice().then(localNews => {
+      if (localNews.length > 0){
+        this.news.next(localNews);
+        return;
       }
-      const news = results.reduce((articles, result) => articles.concat(result.articles), []);
-      //Inserir tema(s) da notícia
-      news.forEach(article => {
-        article.themes = this.estimateNewsTheme(article);
-      });
-      //Inserir país e localidade da notícia
-      Promise.all(news.map(article => this.geonames.getNewsLocation(article))).then(results => {
-        for (let i = 0; i < results.length; i++) {
-          const result = results[i];
-          news[i].country = (result as any).resultCountry;
-          news[i].location = (result as any).location;
-        }
-        this.news.next(news);
-      });
 
+      const promises = this.languages.map(lang => this.getLanguagePromise(lang));
+      Promise.all(promises).then(results => {
+        const languagesArray = Array.from(this.languages);
+        /* O NewsAPI não inclui a linguagem no objeto da notícia. Adicionei o código da linguagem manualmente através do atributo
+           "languageCode" (ex.: pt, en, etc..., ver model/news.ts). A ordem do Promise.all é mantida no array resultante "results"
+           (PT, EN, FR - ver o constructor). Assim, o objeto que ocupa o primeiro índice (índice 0) contém as notícias em português,
+           o segundo índice as em inglês, e as terceira em francês (e assim por diante, seja qual for a quantidade de linguagens).
+        */
+        for (let i = 0; i < this.languages.length; i++) {
+          const languageCode = this.splitNewsLanguage(languagesArray[i])[0];
+          results[i].articles.forEach(news => {
+            news.languageCode = languageCode;
+          });
+        }
+        const news = results.reduce((articles, result) => articles.concat(result.articles), []);
+        //Inserir tema(s) da notícia
+        news.forEach(article => {
+          article.themes = this.estimateNewsTheme(article);
+        });
+        //Inserir país e localidade da notícia
+        Promise.all(news.map(article => this.geonames.getNewsLocation(article))).then(results => {
+          for (let i = 0; i < results.length; i++) {
+            const result = results[i];
+            news[i].country = (result as any).resultCountry;
+            news[i].location = (result as any).location;
+          }
+          this.news.next(news);
+          this.preferences.saveNews(news);
+        });
+
+      }).catch(e => {
+        //this.apiExhausted.next(true);
+      });
     });
   }
   // Explicação em model/news-languages.ts: índice 0 do array: código da linguagem; índice 1 do array: string de pesquisa

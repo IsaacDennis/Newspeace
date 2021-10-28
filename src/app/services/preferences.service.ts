@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@capacitor/storage';
 import { BehaviorSubject } from 'rxjs';
+import { News } from '../model/news';
 import { NewsLanguage } from '../model/news-languages';
 @Injectable({
   providedIn: 'root'
@@ -57,6 +58,19 @@ export class PreferencesService {
     await Storage.set({
       key: 'languages',
       value: JSON.stringify(languages)
+    });
+  }
+  async readNewsFromDevice(): Promise<News[]> {
+    const { value } = await Storage.get({ key: 'news' });
+    const news = JSON.parse(value);
+    if (news == null) { return []; }
+
+    return news;
+  }
+  async saveNews(news: News[]) {
+    await Storage.set({
+      key: 'news',
+      value: JSON.stringify(news)
     });
   }
 }
