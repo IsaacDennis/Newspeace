@@ -74,8 +74,6 @@ export class NewsService {
           this.preferences.saveNews(news);
         });
 
-      }).catch(e => {
-        //this.apiExhausted.next(true);
       });
     });
   }
