@@ -7,7 +7,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./participants-modal.page.scss'],
 })
 export class ParticipantsModalPage implements OnInit {
-  fetepsParticipants = [
+  participants = [
     {
       name: 'Isaac Dennis',
       image: 'assets/participants/isaac-dennis.jpg'
@@ -19,9 +19,7 @@ export class ParticipantsModalPage implements OnInit {
     {
       name: 'Luiz Felipe',
       image: 'assets/participants/luiz-felipe.jpeg'
-    }
-  ]
-  hackathonParticipants = [
+    },
     {
       name: 'Fabiano Barros',
       image: 'assets/participants/fabiano-barros.jpg'
@@ -31,6 +29,7 @@ export class ParticipantsModalPage implements OnInit {
       image: 'assets/participants/yasmin-rossafa.jpeg'
     }
   ]
+
   constructor(private modalController: ModalController) { }
    ngOnInit() {
   }

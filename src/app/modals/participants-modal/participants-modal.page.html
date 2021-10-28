@@ -13,18 +13,9 @@
   <div id="info-div">
     <ion-label>O projeto Newspeace é desenvolvido inteiramente por participantes do 3° Desenvolvimento de Sistemas (2021) da ETEC Abdias do Nascimento. Agradecemos ao nosso professor-mentor Fernando Santiago.</ion-label>
   </div>
-  <div id="feteps-div">
-    <h1>Participantes da FETEPS</h1>
-    <div *ngFor="let participant of fetepsParticipants" class="participant-div">
-      <ion-avatar>
-        <img [src]="participant.image"/>
-      </ion-avatar>
-      <ion-label class="participant-label">{{participant.name}}</ion-label>
-    </div>
-  </div>
-  <div id="hackathon-div">
-    <h1>Também participaram do Hackathon Acadêmico (CPS)</h1>
-    <div *ngFor="let participant of hackathonParticipants" class="participant-div">
+  <div>
+    <h1>Participantes</h1>
+    <div *ngFor="let participant of participants" class="participant-div">
       <ion-avatar>
         <img [src]="participant.image"/>
       </ion-avatar>
