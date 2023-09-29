@@ -15,4 +15,4 @@ The application relates to Sustainable Development Goal 16, whose proposal is to
 ## Academic events
 - 4° Academic Hackathon (Centro Paula Souza) - finalist
 - 13° Feteps (Technology Fair) - Project was selected for [Virtual Fair](http://fetepsvirtual.cpscetec.com.br/projetosView.php?tipo=C&id=131)
-## [Screenshots](https://isaacdennis.github.io/projects/creations/newspeace/#screenshots)
+## [Screenshots](https://isaacdennis.github.io/projects/newspeace.html#screenshots)
